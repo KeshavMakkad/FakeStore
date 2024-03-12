@@ -76,6 +76,13 @@ public class FakeStroeCartService implements CartService {
         return allCartsList;
     }
 
+    @Override
+    public void deleteCart(int id) {
+        restTemp.delete(
+                "https://fakestoreapi.com/carts/" + id
+        );
+    }
+
     private FakeCartDTO cartToDTO(Cart cart){
         FakeCartDTO dto = new FakeCartDTO();
         dto.setId(cart.getId());

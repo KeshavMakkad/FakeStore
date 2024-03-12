@@ -18,5 +18,6 @@ public interface CartService {
 
     public Cart addNewCart(@RequestBody Cart cart);
 
+    public void deleteCart(int id);
 
 }

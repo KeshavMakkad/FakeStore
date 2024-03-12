@@ -38,7 +38,10 @@ public class CartController {
         return cartService.addNewCart(cart);
     }
 
-
+    @DeleteMapping("carts/{id}")
+    public void deleteCart(int id){
+        cartService.deleteCart(id);
+    }
 
 
 
